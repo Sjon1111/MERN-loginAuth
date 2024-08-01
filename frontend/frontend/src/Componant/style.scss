@@ -1,0 +1,65 @@
+.box {
+  margin: 100px auto;
+  height: 200px;
+  width: 500px;
+  background-color: rgb(173, 165, 155);
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightblue;
+
+  .form {
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid rgb(155, 155, 209);
+      margin: 15px;
+    }
+
+    label {
+      margin-left: 10px;
+    }
+
+    select {
+      margin-left: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid rgb(155, 155, 209);
+    }
+
+    button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      border: solid 1px lightgray;
+      border-radius: 10px;
+      background-color: rgb(17, 63, 78);
+      color: white;
+      cursor: pointer;
+    }
+
+
+
+  }
+}
+
+.userinfo {
+  width: 900px;
+  height: auto;
+  margin: 100px auto;
+  background-color: rgb(173, 165, 155);
+  color: white;
+  border: solid 1px lightblue;
+  border-radius: 5px;
+  border-style: groove;
+  padding: 10px;
+
+  .todobox {
+    .MuiDataGrid-toolbarContainer {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .link {
+    margin-right: 20px;
+  }
+
+}
