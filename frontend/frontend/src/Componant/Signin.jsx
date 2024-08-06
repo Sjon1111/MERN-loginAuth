@@ -46,7 +46,7 @@ export default function Signin({ onLogin }) {
     refElement3.current.style.display = 'block';
     refElement5.current.style.display = 'block';
     console.log(toemail)
-    const otpemail = await axios.post("http://localhost:8000/reset", toemail)
+    const otpemail = await axios.post("http://localhost:8000/auth/reset", toemail)
     console.log(otpemail)
     alert(otpemail.data)
   }
@@ -60,7 +60,7 @@ export default function Signin({ onLogin }) {
   }
   const resetPassword = async () => {
 
-    const otpresponse = await axios.put("http://localhost:8000/updatePassword", { query1: otp, query2: toemail.to, query3: newpassword }, {
+    const otpresponse = await axios.put("http://localhost:8000/auth/updatePassword", { otp: otp, email: toemail.to, newPassword: newpassword }, {
       headers: {
         'Content-Type': 'application/json',
       },
@@ -92,7 +92,7 @@ export default function Signin({ onLogin }) {
     try {
 
 
-      const response = await Axios.post("http://localhost:8000/signin", signin)
+      const response = await Axios.post("http://localhost:8000/auth/signin", signin)
 
       onLogin(response.data.token);
       navigate('/dashbord');

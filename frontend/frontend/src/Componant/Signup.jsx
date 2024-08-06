@@ -25,7 +25,7 @@ export default function Signup() {
   const register = async () => {
     // event.preventDefault();
 
-    const responce = await axios.post("http://localhost:8000/signUp", userdata)
+    const responce = await axios.post("http://localhost:8000/user/signUp", userdata)
     console.log(responce)
     console.log(userdata)
 
